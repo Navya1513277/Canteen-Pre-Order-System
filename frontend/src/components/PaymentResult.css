@@ -1,0 +1,46 @@
+.payment-result-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.success-box,
+.failed-box {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  width: 450px;
+}
+
+.success-box h1 {
+  color: green;
+  margin-bottom: 20px;
+}
+
+.failed-box h1 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.success-box p,
+.failed-box p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.back-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffc107;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: orange;
+}
