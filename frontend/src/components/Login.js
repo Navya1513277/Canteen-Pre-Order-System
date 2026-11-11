@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import API_URL from "../api";
 import "./Login.css";
 
 function Login() {
@@ -12,7 +13,7 @@ function Login() {
   try {
 
     const res = await axios.post(
-      'http://localhost:5000/login',
+      `${API_URL}/login`,
       {
         email,
         password,

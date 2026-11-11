@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import API_URL from "../api";
 import "./Menu.css";
 import { useNavigate } from "react-router-dom";
 
@@ -26,7 +27,7 @@ function Menu() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/menu"
+        `${API_URL}/menu`
       );
 
       setFoods(res.data);
