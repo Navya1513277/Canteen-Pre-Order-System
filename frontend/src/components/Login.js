@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import API_URL from "../api";
 import "./Login.css";
@@ -8,6 +9,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('user');
+  const navigate = useNavigate();
   const loginUser = async () => {
 
   try {
@@ -35,11 +37,11 @@ function Login() {
     // REDIRECT
     if (role === "admin") {
 
-      window.location.href = "/admin";
+      navigate("/admin");
 
     } else {
 
-      window.location.href = "/menu";
+      navigate("/menu");
 
     }
 
@@ -122,9 +124,9 @@ function Login() {
         {/* FORGOT PASSWORD */}
         <p className="mt-3 text-center">
 
-          <a href="/">
+          <Link to="/">
             Forgot Password?
-          </a>
+          </Link>
 
         </p>
 
@@ -133,9 +135,9 @@ function Login() {
 
           Not Registered?
 
-          <a href="/register">
+          <Link to="/register">
             {" "}Register Here
-          </a>
+          </Link>
 
         </p>
 

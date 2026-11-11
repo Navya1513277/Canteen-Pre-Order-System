@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Login from './components/Login';
@@ -14,7 +14,7 @@ import Payment from './components/Payment';
 import PaymentResult from './components/PaymentResult';
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
 
       <Navbar />
 
@@ -32,7 +32,7 @@ function App() {
 
       </Routes>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

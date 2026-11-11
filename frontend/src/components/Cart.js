@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 
 function Cart() {
+  const navigate = useNavigate();
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -93,10 +95,7 @@ function Cart() {
           {/* PAYMENT BUTTON */}
           <button
             className="payment-btn"
-            onClick={() =>
-              window.location.href =
-                "/payment"
-            }
+            onClick={() => navigate("/payment")}
           >
             Proceed To Payment
           </button>

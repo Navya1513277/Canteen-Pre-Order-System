@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import API_URL from "../api";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 
 function Register() {
@@ -82,7 +82,7 @@ function Register() {
 
 <p className="text-center mt-3">
   Already Registered?
-  <a href="/login"> Login Here</a>
+  <Link to="/login"> Login Here</Link>
 </p>
 
       </div>
